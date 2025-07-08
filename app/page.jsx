@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
@@ -12,62 +12,70 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="flex flex-col items-center justify-center px-6 py-20">
-            {/* Hero */}
-            <section className="text-center mb-32">
-                <h1 className="text-6xl font-bold">Pablo Ochoa</h1>
-                <p className="mt-4 text-xl text-gray-600">Full Stack Web Developer</p>
-            </section>
+        <main className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+            <div className="lg:flex lg:justify-between lg:gap-4 px-6">
+                {/* Hero & Contact */}
+                <aside className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+                    <section className="text-left">
+                        <h1 className="text-6xl font-bold text-txt-button">Pablo Ochoa</h1>
+                        <p className="mt-4 text-xl text-primary-text">Full Stack Dev</p>
+                        <p className="mt-4 text-secondary-text">Creación de herramientas web escalables orientadas a automatización e innovación con IA</p>
+                    </section>
 
-            {/* Sobre Mí */}
-            <section className="max-w-2xl text-center mb-16">
-                <h2 className="text-3xl font-semibold mb-4">Sobre Mí</h2>
-                <p className="text-gray-700">
-                    Soy Desarrollador Full Stack. Me especializo en construir APIs robustas, bases de datos escalables y soluciones seguras que conectan el Frontend con la lógica empresarial.
-                </p>
-            </section>
-
-            {/* Contacto minimalista */}
-            <section className="text-center mb-32">
-                <p className="text-xl font-semibold">Pablo Ochoa</p>
-                <p className="text-gray-600 mb-4">Construyo soluciones BackEnd eficientes y escalables</p>
-                <div className="flex justify-center gap-6 text-2xl">
-                    <a href="https://github.com/codeOchoa" target="_blank" rel="noopener noreferrer">
-                        <FaGithub />
-                    </a>
-                    <a href="https://www.linkedin.com/in/pablo-m-ochoa/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin />
-                    </a>
-                </div>
-            </section>
-
-            {/* Experiencias */}
-            <section className="max-w-4xl w-full mb-32">
-                <h2 className="text-3xl font-semibold text-center mb-8">Experiencias</h2>
-                <ul className="space-y-6">
-                    <li className="border p-4 rounded shadow">
-                        <h3 className="text-xl font-bold">Desarrollador BackEnd Freelance</h3>
-                        <p className="text-gray-600">Desarrollo de APIs, automatizaciones y sistemas escalables para clientes de diversos sectores.</p>
-                    </li>
-                    <li className="border p-4 rounded shadow">
-                        <h3 className="text-xl font-bold">Proyectos Personales en FullStack</h3>
-                        <p className="text-gray-600">Implementación de soluciones completas integrando Frontend moderno y arquitecturas de BackEnd robustas.</p>
-                    </li>
-                </ul>
-            </section>
-
-            {/* Proyectos */}
-            <section className="max-w-4xl w-full mb-32">
-                <h2 className="text-3xl font-semibold text-center mb-8">Proyectos</h2>
-                <div className="grid gap-6 md:grid-cols-2">
-                    {projects.map((p) => (
-                        <div key={p.id} className="p-4 border rounded shadow">
-                            <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-                            <p className="text-gray-600">{p.stack}</p>
+                    <section className="mt-16">
+                        <div className="flex gap-6 text-2xl">
+                            <a href="https://github.com/codeOchoa" target="_blank" rel="noopener noreferrer" className="hover:text-txtButton">
+                                <FaGithub />
+                            </a>
+                            <a href="https://www.linkedin.com/in/pablo-m-ochoa/" target="_blank" rel="noopener noreferrer" className="hover:text-txtButton">
+                                <FaLinkedin />
+                            </a>
+                            <a href="https://www.instagram.com/pablo.ochoa.95/" target="_blank" rel="noopener noreferrer" className="hover:text-txtButton">
+                                <FaInstagram />
+                            </a>
                         </div>
-                    ))}
-                </div>
-            </section>
+                    </section>
+                </aside>
+
+                {/* Content */}
+                <section className="pt-24 lg:w-[52%] lg:py-24">
+                    {/* About Me */}
+                    <div className="max-w-2xl mb-32">
+                        <p className="text-secondary-text">
+                            He estado aprendiendo a programar durante más de un año y descubrí una verdadera pasión por el desarrollo backend, la automatización y las 
+                            tecnologías emergentes. Mi experiencia emprendedora previa me permitió desarrollar habilidades clave como autonomía, resolución de problemas y 
+                            enfoque en resultados, las cuales aplico hoy al crear soluciones web escalables con propósito.
+                        </p>
+                    </div>
+
+                    {/* Experience */}
+                    <div className="max-w-4xl mb-32">
+                        <ul className="space-y-6">
+                            <li className="border border-txt-button p-4 rounded shadow">
+                                <h3 className="text-xl font-bold text-primary-text">Desarrollador BackEnd Freelance</h3>
+                                <p className="text-secondary-text">Desarrollo de APIs, automatizaciones y sistemas escalables para clientes de diversos sectores.</p>
+                            </li>
+                            <li className="border border-txt-button p-4 rounded shadow">
+                                <h3 className="text-xl font-bold text-primary-text">Proyectos Personales en FullStack</h3>
+                                <p className="text-secondary-text">Implementación de soluciones completas integrando Frontend moderno y arquitecturas de BackEnd robustas.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Projects */}
+                    <div className="max-w-4xl mb-32">
+                        <h2 className="text-3xl font-semibold text-primary-text mb-8">Proyectos</h2>
+                        <div className="grid gap-6 md:grid-cols-2">
+                            {projects.map((p) => (
+                                <div key={p.id} className="p-4 border border-txt-button rounded shadow">
+                                    <h3 className="text-xl font-bold text-primary-text mb-2">{p.title}</h3>
+                                    <p className="text-secondary-text">{p.stack}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
     );
 }
