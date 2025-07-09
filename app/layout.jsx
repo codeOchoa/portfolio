@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="es">
-            <body className={`bg-bg-primary leading-relaxed text-primary-text antialiased selection:bg-bg-button selection:text-txt-button ${josefin.className}`}>
+            <body className={`bg-oxford-blue leading-relaxed text-alice-blue antialiased ${josefin.className}`}>
                 {children}
             </body>
         </html>

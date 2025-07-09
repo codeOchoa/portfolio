@@ -3,3 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+    --color-alice-blue: #E2E8F0; /* 3/10 */
+    --color-brunswick-green: #134E4A; /* Fondo de boton */
+    --color-cadet-gray: #94A3B8; /* 5/10 */
+    --color-jet: #2A2A2A; /* 2/7 */
+    --color-oxford-blue: #0F172A; /* 10/10 */
+    --color-seasalt: #F8FAFC; /* 1/10 */
+    --color-slate-gray: #64748B; /* 6/10 */
+    --color-turquoise: #5EEAD4; /* Texto hover */
+}
